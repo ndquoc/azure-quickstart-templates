@@ -164,10 +164,10 @@
             "name": "es-http-rule",
             "properties": {
               "frontendIPConfiguration": {
-                "id": "[concat(resourceId('Microsoft.Network/loadBalancers', 'es-load-balancer'), '/frontendIPConfigurations/LBFE')]"
+                "id": "[concat(resourceId('Microsoft.Network/loadBalancers', 'comvita-es-load-balancer'), '/frontendIPConfigurations/LBFE')]"
               },
               "backendAddressPool": {
-                "id": "[concat(resourceId('Microsoft.Network/loadBalancers', 'es-load-balancer'), '/backendAddressPools/LBBE')]"
+                "id": "[concat(resourceId('Microsoft.Network/loadBalancers', 'comvita-es-load-balancer'), '/backendAddressPools/LBBE')]"
               },
               "protocol": "Tcp",
               "frontendPort": 9200,
@@ -175,7 +175,7 @@
               "enableFloatingIP": false,
               "idleTimeoutInMinutes": 5,
               "probe": {
-                "id": "[concat(resourceId('Microsoft.Network/loadBalancers', 'es-load-balancer'), '/probes/es-tcp-probe')]"
+                "id": "[concat(resourceId('Microsoft.Network/loadBalancers', 'comvita-es-load-balancer'), '/probes/es-tcp-probe')]"
               }
             }
           },
@@ -183,10 +183,10 @@
             "name": "es-tcp-rule",
             "properties": {
               "frontendIPConfiguration": {
-                "id": "[concat(resourceId('Microsoft.Network/loadBalancers', 'es-load-balancer'), '/frontendIPConfigurations/LBFE')]"
+                "id": "[concat(resourceId('Microsoft.Network/loadBalancers', 'comvita-es-load-balancer'), '/frontendIPConfigurations/LBFE')]"
               },
               "backendAddressPool": {
-                "id": "[concat(resourceId('Microsoft.Network/loadBalancers', 'es-load-balancer'), '/backendAddressPools/LBBE')]"
+                "id": "[concat(resourceId('Microsoft.Network/loadBalancers', 'comvita-es-load-balancer'), '/backendAddressPools/LBBE')]"
               },
               "protocol": "Tcp",
               "frontendPort": 9300,

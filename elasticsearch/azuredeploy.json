@@ -373,7 +373,7 @@
     "lbBackEndPoolsAdded": {
       "backendPools": [
         {
-          "id": "[concat(resourceId('Microsoft.Network/loadBalancers', 'es-load-balancer'), '/backendAddressPools/LBBE')]"
+          "id": "[concat(resourceId('Microsoft.Network/loadBalancers', 'comvita-es-load-balancer'), '/backendAddressPools/LBBE')]"
         }
       ]
     },
