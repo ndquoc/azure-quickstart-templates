@@ -320,7 +320,7 @@
     "nestedTemplatesFolderName": "nestedtemplates",
     "scriptsLocation": "[concat(parameters('_artifactsLocation'), '/scripts/')]",
     "sharedScriptsLocation": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/shared_scripts/ubuntu/",
-    "storageAccountPrefix": "[concat(substring(uniqueString(resourceGroup().id, parameters('esClusterName')), 0, 6), substring(parameters('esClusterName'), 0, 3))]",
+    "storageAccountPrefix": "[concat(substring(uniqueString(resourceGroup().id, parameters('esClusterName')), 0, 2), substring(parameters('esClusterName'), 0, 7))]",
     "storageAccountNameAFS": "[concat(variables('storageAccountPrefix'), 'afs')]",
     "storageAccountNameShared": "[concat(variables('storageAccountPrefix'), 'sh')]",
     "masterNodesIpPrefix": "10.0.0.1",
@@ -335,17 +335,17 @@
       "addressPrefix": "10.0.0.0/16",
       "subnet": {
         "master": {
-          "name": "master",
+          "name": "[concat(parameters('virtualNetworkName'), '-sub-', 'master')]",
           "prefix": "10.0.0.0/24",
           "vnet": "[parameters('virtualNetworkName')]"
         },
         "data": {
-          "name": "data",
+          "name": "[concat(parameters('virtualNetworkName'), '-sub-', 'data')]",
           "prefix": "10.0.1.0/24",
           "vnet": "[parameters('virtualNetworkName')]"
         },
         "other": {
-          "name": "other",
+          "name": "[concat(parameters('virtualNetworkName'), '-sub-', 'other')]",
           "prefix": "10.0.2.0/24",
           "vnet": "[parameters('virtualNetworkName')]"
         }

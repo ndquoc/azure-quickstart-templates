@@ -68,7 +68,7 @@
     {
       "apiVersion": "2017-12-01",
       "type": "Microsoft.Compute/availabilitySets",
-      "name": "es-marvel-set",
+      "name": "[concat(parameters('namespace'), '-es-marvel-set')]",
       "location": "[parameters('location')]",
       "sku": {
 				"name": "Aligned"

@@ -76,7 +76,7 @@
     {
       "apiVersion": "2017-12-01",
       "type": "Microsoft.Compute/availabilitySets",
-      "name": "es-client-set",
+      "name": "[concat(parameters('namespace'), '-es-client-set')]",
       "location": "[parameters('location')]",
       "sku": {
         "name": "Aligned"

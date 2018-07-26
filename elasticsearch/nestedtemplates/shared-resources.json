@@ -48,7 +48,7 @@
         "name": "LBFE",
         "properties": {
           "publicIPAddress": {
-            "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'public-ip')]"
+            "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'comvita-lb-es-public-ip')]"
           }
         }
       }
@@ -105,7 +105,7 @@
     {
       "apiVersion": "2016-03-30",
       "type": "Microsoft.Network/publicIPAddresses",
-      "name": "public-ip",
+      "name": "comvita-lb-es-public-ip",
       "location": "[parameters('location')]",
       "properties": {
         "publicIPAllocationMethod": "Static"
@@ -146,11 +146,11 @@
     },
     {
       "apiVersion": "2016-03-30",
-      "name": "es-load-balancer",
+      "name": "comvita-es-load-balancer",
       "type": "Microsoft.Network/loadBalancers",
       "location": "[parameters('location')]",
       "dependsOn": [
-        "[resourceId('Microsoft.Network/publicIPAddresses', 'public-ip')]"
+        "[resourceId('Microsoft.Network/publicIPAddresses', 'comvita-lb-es-public-ip')]"
       ],
       "properties": {
         "frontendIPConfigurations": "[variables('feLoadBalancerConfig')]",

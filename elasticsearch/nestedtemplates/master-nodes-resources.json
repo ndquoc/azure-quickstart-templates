@@ -70,7 +70,7 @@
     {
       "apiVersion": "2017-12-01",
       "type": "Microsoft.Compute/availabilitySets",
-      "name": "es-master-set",
+      "name": "[concat(parameters('namespace'), '-es-master-set')]",
       "location": "[parameters('location')]",
       "sku": {
 				"name": "Aligned"
