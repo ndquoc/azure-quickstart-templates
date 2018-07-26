@@ -113,11 +113,11 @@
       },
       "dependsOn": [
         "[resourceId('Microsoft.Network/networkInterfaces', concat(variables('nicName'), copyindex()))]",
-        "[resourceId('Microsoft.Compute/availabilitySets', 'es-marvel-set')]"
+        "[resourceId('Microsoft.Compute/availabilitySets', concat(parameters('namespace'), '-es-marvel-set'))]"
       ],
       "properties": {
         "availabilitySet": {
-          "id": "[resourceId('Microsoft.Compute/availabilitySets', 'es-marvel-set')]"
+          "id": "[resourceId('Microsoft.Compute/availabilitySets', concat(parameters('namespace'), '-es-marvel-set'))]"
         },
         "hardwareProfile": {
           "vmSize": "[parameters('vmSize')]"

@@ -121,11 +121,11 @@
       },
       "dependsOn": [
         "[resourceId('Microsoft.Network/networkInterfaces', concat(variables('nicName'), copyindex()))]",
-        "[resourceId('Microsoft.Compute/availabilitySets', 'es-client-set')]"
+        "[resourceId('Microsoft.Compute/availabilitySets', concat(parameters('namespace'), '-es-client-set'))]"
       ],
       "properties": {
         "availabilitySet": {
-          "id": "[resourceId('Microsoft.Compute/availabilitySets', 'es-client-set')]"
+          "id": "[resourceId('Microsoft.Compute/availabilitySets', concat(parameters('namespace'), '-es-client-set'))]"
         },
         "hardwareProfile": {
           "vmSize": "[parameters('vmSize')]"

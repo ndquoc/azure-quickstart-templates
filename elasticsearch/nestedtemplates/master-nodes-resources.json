@@ -115,11 +115,11 @@
       },
       "dependsOn": [
         "[resourceId('Microsoft.Network/networkInterfaces', concat(variables('nicName'), copyindex()))]",
-        "[resourceId('Microsoft.Compute/availabilitySets', 'es-master-set')]"
+        "[resourceId('Microsoft.Compute/availabilitySets', concat(parameters('namespace'), '-es-master-set'))]"
       ],
       "properties": {
         "availabilitySet": {
-          "id": "[resourceId('Microsoft.Compute/availabilitySets', 'es-master-set')]"
+          "id": "[resourceId('Microsoft.Compute/availabilitySets', concat(parameters('namespace'), '-es-master-set'))]"
         },
         "hardwareProfile": {
           "vmSize": "[parameters('vmSize')]"
