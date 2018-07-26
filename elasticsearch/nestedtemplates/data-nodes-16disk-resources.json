@@ -277,7 +277,7 @@
       "resources": [
         {
           "type": "extensions",
-          "name": "installelasticsearch",
+          "name": "comvita-installelasticsearch",
           "apiVersion": "2015-06-15",
           "location": "[parameters('location')]",
           "dependsOn": [
