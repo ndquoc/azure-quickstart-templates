@@ -808,7 +808,7 @@
   },
   "resources": [
     {
-      "name": "master-nodes",
+      "name": "comvita-es-master-nodes",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2015-01-01",
       "dependsOn": [
@@ -849,7 +849,7 @@
       }
     },
     {
-      "name": "marvel-nodes",
+      "name": "comvita-es-marvel-nodes",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2015-01-01",
       "dependsOn": [
@@ -890,7 +890,7 @@
       }
     },
     {
-      "name": "shared",
+      "name": "comvita-es-shared",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2015-01-01",
       "properties": {
@@ -916,7 +916,7 @@
       }
     },
     {
-      "name": "client-nodes",
+      "name": "comvita-es-client-nodes",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2015-01-01",
       "dependsOn": [
@@ -960,7 +960,7 @@
       }
     },
     {
-      "name": "data-nodes",
+      "name": "comvita-es-data-nodes",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2015-01-01",
       "dependsOn": [
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "name": "jumpbox",
+      "name": "comvita-es-jumpbox",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2015-01-01",
       "dependsOn": [
@@ -1039,7 +1039,7 @@
       }
     },
     {
-      "name": "kibana",
+      "name": "comvita-es-kibana",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2015-01-01",
       "dependsOn": [
